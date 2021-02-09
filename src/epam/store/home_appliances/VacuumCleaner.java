@@ -76,6 +76,7 @@ public class VacuumCleaner extends Technique{
                 ", wandType='" + wandType + '\'' +
                 ", motorSpeedRegulation=" + motorSpeedRegulation +
                 ", cleaningWidth=" + cleaningWidth +
-                '}';
+                ", costRub='" + getCostRyb() + '\'' +
+                " } ";
     }
 }

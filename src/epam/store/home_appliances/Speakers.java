@@ -53,6 +53,7 @@ public class Speakers extends Technique {
                 ", numberOfSpeakers=" + numberOfSpeakers +
                 ", frequencyRange='" + frequencyRange + '\'' +
                 ", cordLength=" + cordLength +
-                "} ";
+                ", costRub='" + getCostRyb() + '\'' +
+                " } ";
     }
 }

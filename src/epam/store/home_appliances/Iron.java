@@ -53,6 +53,7 @@ public class Iron extends Technique {
                 ", soleMaterial='" + soleMaterial + '\'' +
                 ", powerVt=" + powerVt +
                 ", color='" + color + '\'' +
-                "} ";
+                ", costRub='" + getCostRyb() + '\'' +
+                " } ";
     }
 }

@@ -76,6 +76,7 @@ public class Oven extends Technique {
                 ", depth=" + depth +
                 ", height=" + height +
                 ", width=" + width +
-                '}';
+                ", costRub='" + getCostRyb() + '\'' +
+                " } ";
     }
 }

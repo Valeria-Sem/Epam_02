@@ -76,6 +76,7 @@ public class Laptop extends Technique{
                 ", systemMemory=" + systemMemory +
                 ", cpu=" + cpu +
                 ", displayInches=" + displayInches +
-                '}';
+                ", costRub='" + getCostRyb() + '\'' +
+                " } ";
     }
 }

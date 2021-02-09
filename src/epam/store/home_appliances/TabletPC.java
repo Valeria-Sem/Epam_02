@@ -65,6 +65,7 @@ public class TabletPC extends Technique {
                 ", memoryRom=" + memoryRom +
                 ", flashMemoryCapacity=" + flashMemoryCapacity +
                 ", color='" + color + '\'' +
-                "} ";
+                ", costRub='" + getCostRyb() + '\'' +
+                " } ";
     }
 }

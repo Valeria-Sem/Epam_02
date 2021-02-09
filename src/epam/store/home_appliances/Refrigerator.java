@@ -76,6 +76,7 @@ public class Refrigerator extends Technique {
                 ", overallCapacity=" + overallCapacity +
                 ", height=" + height +
                 ", width=" + width +
-                '}';
+                ", costRub='" + getCostRyb() + '\'' +
+                " } ";
     }
 }
