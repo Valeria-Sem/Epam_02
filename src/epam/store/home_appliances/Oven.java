@@ -9,7 +9,7 @@ public class Oven extends Technique {
     private double width;
 
 
-    public Oven(int powerConsumption, double weight, int capacity, int depth, double height, double width, double costRyb) {
+    public Oven(double costRyb, int powerConsumption, double weight, int capacity, int depth, double height, double width) {
         super(costRyb);
         this.powerConsumption = powerConsumption;
         this.weight = weight;

@@ -1,7 +1,9 @@
 package epam.store.home_appliances;
 
-public abstract class Technique {
-    private double costRyb;
+import java.util.Comparator;
+
+public class Technique {
+    private final double costRyb;
 
     public Technique(double costRyb) {
         this.costRyb = costRyb;
@@ -11,9 +13,6 @@ public abstract class Technique {
         return costRyb;
     }
 
-    public void setCostRyb(double costRyb) {
-        this.costRyb = costRyb;
-    }
 
     @Override
     public String toString() {
@@ -21,4 +20,6 @@ public abstract class Technique {
                 "costRyb=" + costRyb +
                 '}';
     }
+
+
 }
