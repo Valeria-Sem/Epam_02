@@ -1,6 +1,8 @@
-package epam.store.home_appliances;
+package epam.task_2.store.entity;
 
-public class Oven extends Technique {
+import java.util.Objects;
+
+public class Oven extends Appliance {
     private int powerConsumption;
     private double weight;
     private int capacity;
@@ -8,6 +10,9 @@ public class Oven extends Technique {
     private double height;
     private double width;
 
+    public Oven(){
+
+    }
 
     public Oven(double costRyb, int powerConsumption, double weight, int capacity, int depth, double height, double width) {
         super(costRyb);
@@ -65,6 +70,20 @@ public class Oven extends Technique {
 
     public void setWidth(double width) {
         this.width = width;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Oven oven = (Oven) o;
+        return powerConsumption == oven.powerConsumption && Double.compare(oven.weight, weight) == 0 && capacity == oven.capacity && depth == oven.depth && Double.compare(oven.height, height) == 0 && Double.compare(oven.width, width) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), powerConsumption, weight, capacity, depth, height, width);
     }
 
     @Override

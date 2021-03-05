@@ -1,11 +1,15 @@
-package epam.store.home_appliances;
+package epam.task_2.store.entity;
 
-public class TabletPC extends Technique {
+import java.util.Objects;
+
+public class TabletPC extends Appliance {
     private int batteryCapacity;
     private int displayInches;
     private int memoryRom;
     private int flashMemoryCapacity;
     private String color;
+
+    public TabletPC(){}
 
     public TabletPC(double costRyb, int batteryCapacity, int displayInches,
                     int memoryRom, int flashMemoryCapacity, String color) {
@@ -55,6 +59,20 @@ public class TabletPC extends Technique {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        TabletPC tabletPC = (TabletPC) o;
+        return batteryCapacity == tabletPC.batteryCapacity && displayInches == tabletPC.displayInches && memoryRom == tabletPC.memoryRom && flashMemoryCapacity == tabletPC.flashMemoryCapacity && Objects.equals(color, tabletPC.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), batteryCapacity, displayInches, memoryRom, flashMemoryCapacity, color);
     }
 
     @Override

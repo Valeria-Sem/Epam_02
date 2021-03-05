@@ -1,10 +1,16 @@
-package epam.store.home_appliances;
+package epam.task_2.store.entity;
 
-public class Iron extends Technique {
+import java.util.Objects;
+
+public class Iron extends Appliance {
     private String model;
     private String soleMaterial;
     private int powerVt;
     private String color;
+
+    public Iron(){
+
+    }
 
     public Iron(double costRyb, String model, String soleMaterial, int powerVt, String color) {
         super(costRyb);
@@ -47,8 +53,23 @@ public class Iron extends Technique {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Iron iron = (Iron) o;
+        return powerVt == iron.powerVt && Objects.equals(model, iron.model)
+                && Objects.equals(soleMaterial, iron.soleMaterial) && Objects.equals(color, iron.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), model, soleMaterial, powerVt, color);
+    }
+
+    @Override
     public String toString() {
-        return "Iron{" +
+        return "Iron {" +
                 "model='" + model + '\'' +
                 ", soleMaterial='" + soleMaterial + '\'' +
                 ", powerVt=" + powerVt +

@@ -1,12 +1,18 @@
-package epam.store.home_appliances;
+package epam.task_2.store.entity;
 
-public class Refrigerator extends Technique {
+import java.util.Objects;
+
+public class Refrigerator extends Appliance {
     private int powerConsumption;
     private int weight;
     private int freezerCapacity;
     private double overallCapacity;
     private int height;
     private int width;
+
+    public Refrigerator(){
+
+    }
 
     public Refrigerator(double costRyb, int powerConsumption, int weight,
                         int freezerCapacity, double overallCapacity, int height, int width) {
@@ -65,6 +71,20 @@ public class Refrigerator extends Technique {
 
     public void setWidth(int width) {
         this.width = width;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Refrigerator that = (Refrigerator) o;
+        return powerConsumption == that.powerConsumption && weight == that.weight && freezerCapacity == that.freezerCapacity && Double.compare(that.overallCapacity, overallCapacity) == 0 && height == that.height && width == that.width;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), powerConsumption, weight, freezerCapacity, overallCapacity, height, width);
     }
 
     @Override
