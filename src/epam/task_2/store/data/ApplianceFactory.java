@@ -1,13 +1,13 @@
-package epam.store.data;
+package epam.task_2.store.data;
 
-import epam.store.home_appliances.*;
+import epam.task_2.store.entity.*;
 
 import java.util.ArrayList;
 
-public class TechniqueFactory {
+public class ApplianceFactory {
 
-    public static ArrayList<Technique> getTechnique(ArrayList<Item> items){
-        ArrayList<Technique> techniques = new ArrayList<>();
+    public static ArrayList<Appliance> getTechnique(ArrayList<Item> items){
+        ArrayList<Appliance> techniques = new ArrayList<>();
 
         for (Item item: items) {
 

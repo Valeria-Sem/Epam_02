@@ -1,16 +1,16 @@
-package epam.store.data;
+package epam.task_2.store.data;
 
-import epam.store.home_appliances.Technique;
+import epam.task_2.store.entity.Appliance;
 
 import java.util.ArrayList;
 
 public class Utils  {
 
-    public static ArrayList<Technique> findTheCheapestProduct(ArrayList<Technique> technique){
-        ArrayList<Technique> cheapestProduct = new ArrayList<>();
+    public static ArrayList<Appliance> findTheCheapestProduct(ArrayList<Appliance> technique){
+        ArrayList<Appliance> cheapestProduct = new ArrayList<>();
         Double min = null;
 
-        for (Technique item : technique) {
+        for (Appliance item : technique) {
             double currentCost = item.getCostRyb();
             if (min == null) {
                 min = currentCost;
@@ -27,10 +27,10 @@ public class Utils  {
         return cheapestProduct;
     }
 
-    public static ArrayList<Technique> findProduct(ArrayList<Technique> tec, String name){
-        ArrayList<Technique> products = new ArrayList<>();
+    public static ArrayList<Appliance> findProduct(ArrayList<Appliance> tec, String name){
+        ArrayList<Appliance> products = new ArrayList<>();
 
-        for(Technique item : tec){
+        for(Appliance item : tec){
             if(item.toString().contains(name)){
                 products.add(item);
             }

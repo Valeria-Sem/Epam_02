@@ -1,4 +1,4 @@
-package epam.store.data;
+package epam.task_2.store.data;
 
 import java.util.HashMap;
 
